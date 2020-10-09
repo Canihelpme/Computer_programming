@@ -1,0 +1,13 @@
+/*
+(Use the isPrime Method) Listing 6.7, PrimeNumberMethod.java, provides the
+isPrime(int number) method for testing whether a number is prime. Use this
+method to find the number of prime numbers less than 10000.
+*/
+package java_lab_04;
+import java.util.Scanner;
+
+public class six_point_ten
+{
+	Scanner input = new Scanner(System.in);
+	
+}

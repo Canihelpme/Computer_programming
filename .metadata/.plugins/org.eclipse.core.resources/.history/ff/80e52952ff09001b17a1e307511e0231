@@ -1,0 +1,22 @@
+package java_lab_04;
+
+public class Exercise_06_20 {
+	public static void main(String[] args)
+	{
+		String s = "my name is";
+		if(countLetters(s) == 1)
+		{
+			System.out.println("HI");
+		}
+		else
+		{
+			System.out.println("BYE");
+		}
+	}
+	public static int countLetters(String s)
+	{
+		int me = 1;
+		return(me);
+	}
+	
+}

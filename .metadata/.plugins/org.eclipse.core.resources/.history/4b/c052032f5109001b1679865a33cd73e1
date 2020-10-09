@@ -1,0 +1,31 @@
+package java_lab_04;
+import java.util.*;
+import java.util.Scanner;
+
+public class six_point_six {
+	public static void main(String[] args) 
+	{
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the number: ");
+		int number = input.nextInt();
+		displayPattern(number);
+	}
+	public static void displayPattern(int n)
+	{
+		int blank = n - 1;
+		for(int i = 1; i <= n; i++)
+		{
+			for(int k = n; k > 0; k--)
+			{
+				System.out.print(" ");
+			}
+			for(int j = i; j > 0; j--)
+			{
+				System.out.printf("%d", j);
+			}
+			System.out.printf("\n");
+			--blank;
+		}
+	}
+
+}

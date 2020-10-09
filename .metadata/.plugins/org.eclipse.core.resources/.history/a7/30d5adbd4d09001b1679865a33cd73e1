@@ -1,0 +1,13 @@
+package java_lab_04;
+
+public class six_point_six {
+	public static void main(String[] args) 
+	{
+		
+	}
+	public static void displayPatter(int n)
+	{
+		
+	}
+
+}

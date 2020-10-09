@@ -1,0 +1,23 @@
+/*
+(Count occurrence of numbers) Write a program that reads the integers between 1
+and 100 and counts the occurrences of each. Assume the input ends with 0.
+Note that if a number occurs more than one time, the plural word “times” is used
+in the output.
+*/
+package java_lab_04;
+import java.util.Scanner;
+public class Exercise_07_03 
+{
+	public static void main(String[] args) 
+	{
+		int i;
+		Scanner input = new Scanner(System.in);
+		int string_array[] = new int[100];
+	
+		for(i = 0; i < 100; i++)
+		{
+			string_array[i] = input.nextInt();
+		
+		}
+	}
+}
