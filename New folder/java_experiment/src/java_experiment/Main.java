@@ -5,8 +5,8 @@ public class Main
 {
 	public static void main(String[] args)
 	{
-		Student_info info = new Student_info();
-		Scanner input = new Scanner(System.in);
+		hufs_student_management info = new hufs_student_management();
+		Scanner insert = new Scanner(System.in);
 		
 		while(true)
 		{
@@ -18,7 +18,7 @@ public class Main
 			System.out.println("4.Display all student");
 			System.out.println("5.Shutdown");
 			System.out.println("Enter the number: ");
-			select = input.nextInt();
+			select = insert.nextInt();
 			
 			if(select == 1)
 				info.Add_stu();
@@ -29,7 +29,7 @@ public class Main
 			else if(select == 4)
 				info.Display_stu();
 			else if(select == 5)
-				if(!info.shutdown()) break;
+				 break;
 		}
 		
 	}

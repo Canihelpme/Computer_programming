@@ -1,7 +1,7 @@
 package java_experiment;
 import java.util.*;
 
-public class Student_info {
+public class hufs_student_management {
 	
 	int index = 0;
 	int temp_add_id = 0;
@@ -169,4 +169,3 @@ public class Student_info {
 		}
 	}
 }
-

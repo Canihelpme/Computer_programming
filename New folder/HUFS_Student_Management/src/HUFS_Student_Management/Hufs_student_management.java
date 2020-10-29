@@ -1,7 +1,7 @@
-package java_experiment;
-import java.util.*;
+package HUFS_Student_Management;
+import java.util.Scanner;
 
-public class Student_info {
+public class Hufs_student_management {
 	
 	int index = 0;
 	int temp_add_id = 0;
@@ -13,41 +13,41 @@ public class Student_info {
 	String Name;
 	String Address;
 	String Department;
-	static Student_info[] stu = new Student_info[100];
+	static Hufs_student[] stu = new Hufs_student[100];
 	Scanner input = new Scanner(System.in);
 	
 	public void Add_stu()
 	{
 		while(true)
 		{
-			stu[index] = new Student_info();
+			stu[index] = new Hufs_student();
 			System.out.println("Enter the student id: ");
 			int temp_add_id = input.nextInt();
 			for(int j = 0; j <index; j++)
 			{
-				if(stu[j].ID == temp_add_id)
+				if(stu[j].getID() == temp_add_id)
 				{
 					System.out.println("Error! Duplicated ID.");
 					System.out.println("Enter again the student id:");
 					temp_add_id = input.nextInt();
 				}
 			}
-			stu[index].ID = temp_add_id;
+			stu[index].setID(temp_add_id);
 				
 			System.out.println("Enter Student Name: ");
-			stu[index].Name = input.next();
+			stu[index].setName(input.next());
 				
 			System.out.println("Enter Student Address: ");
-			stu[index].Address = input.next();
+			stu[index].setAddress(input.next());
 				
 			System.out.println("Enter Student Department:");
-			stu[index].Department = input.next();
+			stu[index].setDepartment(input.next());
 			
 			System.out.println("The information you want to add is: ");
-			System.out.println(stu[index].ID);
-			System.out.println(stu[index].Name);
-			System.out.println(stu[index].Address);
-			System.out.println(stu[index].Department);
+			System.out.println(stu[index].getID());
+			System.out.println(stu[index].getName());
+			System.out.println(stu[index].getAddress());
+			System.out.println(stu[index].getDepartment());
 
 			index++;
 			System.out.println("Enter 'TRUE' if you want to keep add students.   " + "Otherwise enter the 'FALSE'.");
@@ -62,12 +62,12 @@ public class Student_info {
 		{
 			System.out.println("-----LIST OF STUDENTS-----");
 			for(int i = 0; i < index; i++)
-				System.out.println(stu[i].ID+" "+stu[i].Name);
+				System.out.println(stu[i].getID()+" "+stu[i].getName());
 			System.out.println("Enter the student ID whom you want to update: ");
 			update_num = input.nextInt();
 			for(int i = 0; i < index; i++)
 			{
-				if(stu[i].ID == update_num)
+				if(stu[i].getID() == update_num)
 				{
 					System.out.println("Enter the number what you want to update: ");
 					System.out.println("1.ID   2.Name   3.Address   4.Department   5.Whole");
@@ -79,48 +79,48 @@ public class Student_info {
 						temp_up_id = input.nextInt();
 						for(int j = 0; j <index; j++)
 						{
-							if(stu[j].ID == temp_up_id)
+							if(stu[j].getID() == temp_up_id)
 							{
 								System.out.println("Error! Duplicated ID.");
 								System.out.println("Enter again the student ID to update");
 								temp_up_id = input.nextInt();
 							}
 						}
-						stu[i].ID = temp_up_id;
+						stu[i].setID(temp_up_id);
 						System.out.println("Update completed.");
 					}
 					
 					else if(select == 2)
 					{
 						System.out.println("Enter the student name to update: ");
-						stu[i].Name = input.next();
+						stu[i].setName(input.next());
 						System.out.println("Update completed.");
 					}
 					
 					else if(select == 3)
 					{
 						System.out.println("Enter the student address to update: ");
-						stu[i].Address = input.next();
+						stu[i].setAddress(input.next());
 						System.out.println("Update completed.");
 					}
 					
 					else if(select == 4)
 					{
 						System.out.println("Enter the student department to update: ");
-						stu[i].Department = input.next();
+						stu[i].setDepartment(input.next());
 						System.out.println("Update completed.");
 					}
 					
 					else if(select == 5)
 					{
 						System.out.println("Enter the student number to update");
-						stu[i].ID = input.nextInt();
+						stu[i].setID(input.nextInt());
 						System.out.println("Enter the student name to update");
-						stu[i].Name = input.next();
+						stu[i].setName(input.next());
 						System.out.println("Enter the student address to update");
-						stu[i].Address = input.next();
+						stu[i].setAddress(input.next());
 						System.out.println("Enter the student department to update");
-						stu[i].Department = input.next();
+						stu[i].setDepartment(input.next());
 						System.out.println("Update completed.");
 					}
 				}
@@ -138,17 +138,17 @@ public class Student_info {
 		{
 			System.out.println("-----LIST OF STUDENTS-----");
 			for(int i = 0; i < index; i++)
-				System.out.println(stu[i].ID+" "+stu[i].Name);
+				System.out.println(stu[i].getID()+" "+stu[i].getName());
 			System.out.println("Enter the student ID you want to search: ");
 			search_num = input.nextInt();
 			for(int i = 0; i < index; i++)
 			{
-				if(stu[i].ID == search_num)
+				if(stu[i].getID() == search_num)
 				{
-					System.out.println(stu[i].ID);
-					System.out.println(stu[i].Name);
-					System.out.println(stu[i].Address);
-					System.out.println(stu[i].Department);
+					System.out.println(stu[i].getID());
+					System.out.println(stu[i].getName());
+					System.out.println(stu[i].getAddress());
+					System.out.println(stu[i].getDepartment());
 				}
 			}
 			System.out.println("Enter 'TRUE' if you want to keep SEARCH students.   " + "Otherwise enter the 'FALSE'.");
@@ -161,12 +161,12 @@ public class Student_info {
 	{
 		for(int i = 0; i < index; i++)
 		{
-			System.out.println(stu[i].ID+"\n");
-			System.out.println(stu[i].Name+"\n");
-			System.out.println(stu[i].Address+"\n");
-			System.out.println(stu[i].Department+"\n");
+			System.out.println(stu[i].getID()+"\n");
+			System.out.println(stu[i].getName()+"\n");
+			System.out.println(stu[i].getAddress()+"\n");
+			System.out.println(stu[i].getDepartment()+"\n");
 			System.out.println("---------------------");
 		}
 	}
-}
 
+}
