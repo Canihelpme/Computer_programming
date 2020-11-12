@@ -1,7 +1,9 @@
 package HUFS_Student_Management;
+import java.util.*;
+
 public class Hufs_student {
 	
-	private int ID;
+	private int ID = 0;
 	private String name;
 	private String address;
 	private String department;
@@ -60,5 +62,4 @@ public class Hufs_student {
 	public void setDepartment(String department) {
 		this.department = department;
 	}
-	
 }
